@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تسجيل الدخول </title>
+    <link rel="icon" type="image/x-icon" href="./signin.png">
+
+    <link rel="stylesheet" href="index.css" />
+
+</head>
+
+<body>
+    <main class="card" role="main">
+        <div class="brand">
+            <div class="logo">م</div>
+            <div>
+                <h1>مرحبا بك</h1>
+                <p class="lead">سجّل دخولك لبدء العمل أو إدارة حسابك بسرعة وأمان</p>
+            </div>
+        </div>
+
+        <form id="loginForm" novalidate>
+            <div class="field">
+                <label for="identifier">البريد الإلكتروني أو اسم المستخدم</label>
+                <div class="input-row">
+                    <input type="text" id="identifier" name="identifier" placeholder="مثال: noha@example.com أو noha123"
+                        autocomplete="username" required />
+                </div>
+                <div id="idHelp" class="helper">يمكنك استخدام البريد الإلكتروني أو اسم المستخدم.</div>
+            </div>
+
+            <div class="field">
+                <label for="password">كلمة المرور</label>
+                <div class="input-row">
+                    <input type="password" id="password" name="password" placeholder="ادخل كلمة المرور"
+                        autocomplete="current-password" required minlength="8" />
+                    <button type="button" class="eye-toggle" id="togglePwd" aria-label="إظهار كلمة المرور">👁️</button>
+                </div>
+                <div id="pwdHelp" class="helper">الحد الأدنى 8 أحرف.</div>
+            </div>
+
+            <div id="formError" class="error" role="alert" aria-live="polite" style="display:none"></div>
+
+            <div class="actions">
+                <button type="submit" id="loginBtn" class="btn" disabled>تسجيل الدخول</button>
+                <div class="row-between">
+                    <a href="#" class="small-link">نسيت كلمة المرور؟</a>
+                    <a href="#" class="small-link">إنشاء حساب جديد</a>
+                </div>
+            </div>
+
+            <div class="or">
+                <hr />
+                <div>أو</div>
+                <hr />
+            </div>
+
+            <div class="socials">
+                <button type="button" aria-label="تسجيل الدخول عبر جوجل">Google</button>
+                <button type="button" aria-label="تسجيل الدخول عبر فيسبوك">Facebook</button>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
